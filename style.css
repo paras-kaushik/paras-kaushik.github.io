@@ -8,7 +8,7 @@ body {
 
 #body-header {
   height: 65vh;
-  opacity: 0.8;
+  opacity: 1;
   background-image: url(image/macbook_mouse.jpg);
   background-size: cover;
   background-position: center;
@@ -97,6 +97,7 @@ section:nth-child(2n + 1) {
   padding: 20px 10px 10px;
   margin: 10px auto;
   font-weight: 400;
+  text-align: center;
 }
 
 .section-heading span {
@@ -146,18 +147,39 @@ section:nth-child(2n + 1) {
 }
 
 /*Current Employer Section*/
+#current-job {
+  margin: auto;
+  align-items: center;
+  padding: 2rem;
+}
 .employer-container {
-  display: flex;
-  margin-right: 1 rem;
   width: 70%;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
 }
 .employer-container-child {
   display: flex;
-  margin-right: 5rem;
+}
+#employer-container-child-description {
+  align-items: center;
+}
+#my-employer-image {
+  height: 10rem;
+  width: 10rem;
+  margin: auto; /* BRINGS THIS IMAGE TO CENTER ! */
+}
+/*above we set the div dimesnsinons -now we will make the image agree to it  otherwise image will just overflow*/
+#my-employer-image img {
+  height: 100%;
+  width: 100%; /*means 100 % of immidiate div*/
+  border-radius: 90%;
 }
 .job-desc {
-  margin: auto;
-  margin-left: 6rem;
+  white-space: nowrap;
 }
 
 /*Skills Section*/
@@ -519,4 +541,47 @@ button:focus {
 .about-para {
   text-align: left;
   font-size: medium;
+}
+
+@media screen and (max-width: 1200px) {
+  #name-social-container {
+    width: 80%;
+    margin: auto;
+  }
+  #about-para {
+    color: black;
+  }
+  .nav-menu {
+    display: none;
+  }
+  .timeline-divider {
+    left: 5%;
+  }
+  .timeline-box {
+    left: 12% !important;
+    width: 80%;
+  }
+  .timeline-designation {
+    font-size: var(--section-heading-font-size);
+    color: #2857a4;
+    display: inline-block;
+    padding-top: 10px;
+    margin-right: 0.5rem;
+    white-space: normal;
+  }
+  .timeline-story-headers {
+    text-align: center;
+    align-items: center;
+  }
+  .timeline-Organisation {
+    font-size: small;
+    margin: 10px;
+  }
+  .timeline-duration {
+    font-size: medium;
+    margin: 10px;
+  }
+  #my-timeline-image {
+    display: none;
+  }
 }
