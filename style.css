@@ -190,15 +190,16 @@ section:nth-child(2n + 1) {
   margin-bottom: 1.5rem;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-around;
 }
 
 .skill-progress {
   /*the canvas on which the inner coloured div appears*/
   width: 14rem;
-  height: 2 rem;
+  height: fit-content;
   margin: 20px;
-  background-color: lightgrey;
+  background-color: lightgray;
   border-radius: 0.8rem;
   overflow: hidden;
   box-shadow: inset 1px 1px 2px 1px #b9b9b9;
@@ -226,16 +227,15 @@ section:nth-child(2n + 1) {
 .timeline {
   position: relative;
   width: 75%;
-  border: 2px solid black;
 }
 
 .timeline-box {
-  position: relative;
-  margin: 5px;
+  padding: 5px;
   width: 40%;
+  position: relative;
   left: 5%;
   min-height: 150px;
-  border: 2px solid black;
+  text-align: right;
 }
 
 .timeline-box:nth-child(2n) {
@@ -281,6 +281,47 @@ section:nth-child(2n + 1) {
   transform: rotate(270deg);
   z-index: 2;
   margin: -50px;
+}
+.timeline-container {
+  padding: 8px;
+}
+
+.timeline-logo {
+  position: absolute;
+  width: 100px;
+  overflow: hidden;
+}
+
+.timeline-logo > img {
+  width: 100%;
+}
+.experience-designation {
+  font-size: 1.4rem;
+}
+
+.experience-company-name {
+  margin: 5px 0 0;
+  color: #eb822d;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.experience-duration {
+  color: #9e9b9b;
+  font-weight: 100;
+  color: grey;
+  font-size: 1rem;
+}
+
+.experience-description {
+  font-size: 1rem;
+  padding: 2px;
+  color: grey;
+  line-height: 20px;
+}
+
+.text-align-justify {
+  text-align: justify;
 }
 /* Portfolio Section */
 
@@ -509,8 +550,7 @@ button:focus {
 .timeline-story-headers {
   display: flex;
 }
-#my-timeline-image {
-}
+
 /*Notice how above we set the Parent now we are setting image to it */
 #my-timeline-image img {
   height: 100%;
@@ -542,7 +582,6 @@ button:focus {
   text-align: left;
   font-size: medium;
 }
-
 @media screen and (max-width: 1200px) {
   #name-social-container {
     width: 80%;
