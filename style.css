@@ -518,7 +518,6 @@ button:focus {
   color: #2857a4;
 }
 
-/*Common Percent classes*/
 .eighty-percent {
   height: inherit; /*height of parent*/
   width: 80%;
